@@ -38,16 +38,13 @@ def home():
 @app.route("/check_word", methods=["POST"])
 def check_word():
     word = request.form["word"]
-    
-    
     derivational_forms = get_derivational_forms(word)
     all_forms = []
-    all_forms = [word, word]
-    """
+    
     for w in derivational_forms:
         ls_of_w = check_prefix_suffix(w)
         all_forms.extend(ls_of_w)
-    """
+
     return (
         ", ".join(all_forms)
         if all_forms
