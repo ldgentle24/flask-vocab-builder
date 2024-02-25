@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordNet Checker</title>
+</head>
+<body>
+    <h1>WordNet Checker</h1>
+    <form action="/check_word" method="post">
+        <label for="word">Enter a word:</label>
+        <input type="text" id="word" name="word">
+        <button type="submit">Check</button>
+    </form>
+    <div id="result">
+        {% if result %}
+            {{ result }}
+        {% endif %}
+    </div>
+</body>
+</html>
