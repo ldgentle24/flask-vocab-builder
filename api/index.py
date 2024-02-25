@@ -1,3 +1,9 @@
+import nltk
+import os
+
+nltk_data_path = os.path.join(os.path.dirname(__file__), "nltk_data")
+nltk.data.path.append(nltk_data_path)
+
 from flask import Flask, render_template, request
 from nltk.corpus import wordnet as wn, words
 
