@@ -1,7 +1,3 @@
-import nltk
-nltk.download("words")
-nltk.download("wordnet")
-
 from flask import Flask, render_template, request
 from nltk.corpus import wordnet as wn, words
 
